@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.result {
+    margin-top: 20px;
+}
+.cube {
+    background-color: #e60000;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+
+}
+
+.number {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}

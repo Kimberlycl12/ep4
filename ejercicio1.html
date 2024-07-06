@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 1</title>
+    <link rel="styleest" href="estilo.css">
+</head>
+<body>
+    <h1>Cubos de Números Impares</h1>
+    <button onclick="showCubes()">Ingresar Números y Mostrar Cubos</button>
+    <div id="result" class="result"></div>
+    <script>
+         function showCubes() {
+            // Pedir al usuario que ingrese dos números
+            var num1 = parseInt(prompt("Ingrese el primer número:"));
+            var num2 = parseInt(prompt("Ingrese el segundo número:"));
+
+            // Asegurarse de que num1 sea el menor y num2 el mayor
+            var start = (num1 < num2) ? num1 : num2;
+            var end = (num1 > num2) ? num1 : num2;
+
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Limpiar resultados anteriores
+
+            var i = start;
+            while (i <= end) {
+                if (i % 2 !== 0) {
+                    var cube = i * i * i;
+                    var cubeDiv = document.createElement('div');
+                    cubeDiv.className = 'cube';
+                    cubeDiv.textContent = 'El cubo de ' + i + ' es ' + cube;
+                    resultDiv.appendChild(cubeDiv);
+                }
+                i++;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
